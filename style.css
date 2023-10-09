@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url(/1920x1080.jpg);
+    background-image: url(../1920x1080.jpg);
     display: flex;
     justify-content: center;
     margin-top: 13rem;
