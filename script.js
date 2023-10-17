@@ -15,11 +15,16 @@ function adicionar(task){
     const tarefa = document.createElement('h3')
     tarefa.innerText = inputValue
 
+    const doneButton = document.createElement('button')
+    doneButton.classList.add('done')
+    doneButton.innerText = "Feito"
+
     const deleteButton = document.createElement('button')
     deleteButton.classList.add('excluir')
     deleteButton.innerText = "Excluir"
 
     todoList.appendChild(tarefa)
+    todoList.appendChild(doneButton)
     todoList.appendChild(deleteButton)
 
     container.appendChild(todoList)
@@ -29,7 +34,7 @@ function adicionar(task){
 
 }
 
-function deletar(botao){
+function clicar(botao){
 
     const targetEl = botao.target
     parentEl = targetEl.closest('div')
@@ -37,8 +42,12 @@ function deletar(botao){
     if (targetEl.classList.contains('excluir')){
         parentEl.remove()
     }
+
+    else if (targetEl.classList.contains('done')){
+        parentEl.classList.toggle('feito')
+    }
 }
 
 todoAdd.addEventListener('submit', adicionar)
 
-document.addEventListener('click', deletar)
+document.addEventListener('click', clicar)

@@ -59,6 +59,8 @@ input[type=text]{
     gap: 0.5rem;
     flex: 1;
     width: 100%;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 .hide{
@@ -73,7 +75,7 @@ input[type=text]{
     height: 100%;
     border: 3px solid rgb(50, 0, 143);
     border-radius: 10px;
-    background-color: transparent;
+    background-color: white;
     cursor: pointer;
     width: 5rem;
     padding: 5px;
@@ -87,8 +89,24 @@ input[type=text]{
     cursor: pointer;
     padding: 5px;
     width: 5rem;
-    background-color: transparent;
+    background-color: white;
     transition: 0.5s;
+}
+
+.done{
+    height: 2.5rem;
+    border: 3px solid rgb(0, 148, 20);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    width: 5rem;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.done:hover{
+    background-color: rgb(0, 148, 20);
+    color: white;
 }
 
 .excluir:hover{
@@ -99,4 +117,13 @@ input[type=text]{
 .add:hover{
     background-color: rgb(50, 0, 143);
     color: white;
+}
+
+.feito{
+    background-color: rgb(110, 230, 136);
+}
+
+.feito h3{
+    text-decoration: line-through;
+    color: rgb(0, 68, 6);
 }
